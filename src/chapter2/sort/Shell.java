@@ -1,8 +1,10 @@
-package chapter2.impl;
+package chapter2.sort;
 
-import chapter2.Sort;
-
-public class Shell implements Sort {
+/**
+ * @author bxwang
+ *
+ */
+public class Shell implements SortTemplate {
     @Override
     public void sort(Comparable[] a) {
         int length = a.length;

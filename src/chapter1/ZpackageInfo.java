@@ -16,6 +16,6 @@
  *              首尾单链表：{@link chapter1.impl.queue.SinglyLinkedQueue}
  *  3. 背包
  *      接口定义{@link chapter1.Bag}
- *          单链表实现：{@link chapter1.impl.bag.SinglyBag}
+ *          单链表实现：{@link chapter1.impl.bag.SinglyLinkedBag}
  */
 package chapter1;

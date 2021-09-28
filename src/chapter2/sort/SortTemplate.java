@@ -1,8 +1,8 @@
-package chapter2;
+package chapter2.sort;
 
 import edu.princeton.cs.algs4.StdOut;
 
-public interface Sort {
+public interface SortTemplate {
     void sort(Comparable[] a);
 
     default boolean less(Comparable v1, Comparable v2) {

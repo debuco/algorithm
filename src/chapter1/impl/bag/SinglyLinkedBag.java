@@ -9,7 +9,7 @@ import java.util.Iterator;
  * @date 2021/9/28
  * @param <T>
  */
-public class SinglyBag<T> implements Bag<T> {
+public class SinglyLinkedBag<T> implements Bag<T> {
     private int size;
     private Node<T> first;
 

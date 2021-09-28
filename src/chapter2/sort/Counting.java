@@ -1,8 +1,8 @@
-package chapter2.impl;
+package chapter2.sort;
 
-import chapter2.Sort;
+import chapter2.sort.SortTemplate;
 
-public class Counting implements Sort {
+public class Counting implements SortTemplate {
     @Override
     public void sort(Comparable[] a) {
         int[] counting = new int[10];

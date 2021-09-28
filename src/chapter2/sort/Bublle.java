@@ -1,8 +1,6 @@
-package chapter2.impl;
+package chapter2.sort;
 
-import chapter2.Sort;
-
-public class Bublle implements Sort {
+public class Bublle implements SortTemplate {
     @Override
     public void sort(Comparable[] a) {
         boolean swapped = true;

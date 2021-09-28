@@ -1,39 +1,30 @@
-package chapter2.impl;
+package chapter2.sort;
 
-import chapter2.Sort;
-
-public class MergeUB implements Sort {
+/**
+ * @author bxwang
+ */
+public class MergeBU implements SortTemplate {
     private Comparable[] aux;
 
     @Override
     public void sort(Comparable[] a) {
         aux = new Comparable[a.length];
-        sort(a, 0, a.length - 1);
-    }
-
-    private void sort(Comparable[] a, int lo, int high) {
-        if (high <= lo) {
-            return;
+        for (int sz = 1; sz <= a.length; sz = sz + sz) {
+            for (int lo = 0; lo < a.length-sz; lo = lo + sz + sz) {
+                mergeNative(a, lo, lo + sz - 1, Math.min(a.length - 1, lo + sz + sz - 1));
+            }
         }
-
-        int mid = lo + (high-lo) / 2;
-        sort(a, lo, mid);
-        sort(a, mid + 1, high);
-        mergeNative(a, lo, mid, high);
     }
 
     private void mergeNative(Comparable[] a, int lo, int mid, int high) {
         int i=lo, j=mid + 1;
 
-        /*
-            需要借助额外的辅助数组
-         */
         for (int k=lo; k<=high; k++) {
             aux[k] = a[k];
         }
 
 
-        /**
+        /*
          * 1. 左半边用尽
          * 2. 右半边用尽
          * 3. 右半边元素比左半边小

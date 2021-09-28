@@ -2,16 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94571765-ae2e-4db6-b029-f648f9aa4261" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/chapter2/ZpackageInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter2/sort/Insertion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter2/sort/Selection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter2/sort/Stack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithms/META-INF/algorithms.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithms/chapter1/Evaluate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithms/chapter1/MyLinkedList$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithms/chapter1/MyLinkedList$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithms/chapter1/MyLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithms/chapter1/impl/stack/FixedCapacityStack$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithms/chapter1/impl/stack/FixedCapacityStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithms/chapter1/impl/stack/FixedCapacityStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithms/chapter2/impl/Insertion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithms/chapter2/impl/Insertion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter1/impl/bag/SinglyBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/impl/bag/SinglyBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter1/ZpackageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/ZpackageInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter1/impl/bag/SinglyBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/impl/bag/SinglyLinkedBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/MaxPriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/priorityqueue/MaxPriorityQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/SortTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Bublle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/Bublle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Counting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/Counting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Insertion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/MaxPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/priorityqueue/MaxPQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/MergeBU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/MergeBU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/MergeUB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/MergeUB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Quick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/Quick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Selection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Shell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/Shell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Stack.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +162,7 @@
       <workItem from="1620370248457" duration="118156000" />
       <workItem from="1620868170291" duration="76495000" />
       <workItem from="1621581752844" duration="674000" />
-      <workItem from="1632748285553" duration="55934000" />
+      <workItem from="1632748285553" duration="64288000" />
     </task>
     <servers />
   </component>
