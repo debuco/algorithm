@@ -1,5 +1,6 @@
-package chapter1;
+package chapter1.impl;
 
+import chapter1.Stack;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 

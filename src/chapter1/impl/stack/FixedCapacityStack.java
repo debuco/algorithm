@@ -1,34 +1,46 @@
 package chapter1.impl.stack;
 
 import chapter1.Stack;
+import util.CheckUtil;
 
 import java.util.Iterator;
 
+/**
+ * @author bxwang
+ * @date 2021/9/28
+ * @param <T>
+ */
 public class FixedCapacityStack<T> implements Stack<T> {
 
-    private T[] contaner;
-    private int size = 0;
-    public FixedCapacityStack(int capacity) {
-        contaner = (T[]) new Object[capacity];
-    }
+    /**
+     *  存储元素的容器
+     */
+    private T[] container;
+    /**
+     * 容器中元素的数量
+     */
+    private int size;
 
+    public FixedCapacityStack(int capacity) {
+        container = (T[]) new Object[capacity];
+    }
 
     @Override
     public void push(T t) {
-        if (size >= contaner.length){
-            throw new RuntimeException();
-        }
+        CheckUtil.checkTypeAndCapacity();
 
-        contaner[size++] = t;
+        container[size++] = t;
     }
 
     @Override
     public T pop() {
-        if (size <= 0) {
-            throw new RuntimeException();
+        // can throw exception or just return null
+        if (isEmpty()) {
+            return null;
         }
 
-        return contaner[--size];
+        return container[--size];
+
     }
 
     @Override
@@ -43,16 +55,22 @@ public class FixedCapacityStack<T> implements Stack<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new Iterator<T>() {
-            @Override
-            public boolean hasNext() {
-                return size > 0;
-            }
-
-            @Override
-            public T next() {
-                return contaner[--size];
-            }
-        };
+        return new ReverseArrayIterator<T>();
     }
+
+
+    public class ReverseArrayIterator<I> implements Iterator<I> {
+        private int index = size - 1;
+
+        @Override
+        public boolean hasNext() {
+            return index > 0;
+        }
+
+        @Override
+        public I next() {
+            return (I) container[index--];
+        }
+    }
+
 }
