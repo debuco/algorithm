@@ -1,7 +1,6 @@
 package chapter1.impl.bag;
 
 import chapter1.Bag;
-import chapter1.impl.queue.SinglyLinkedQueue;
 
 import java.util.Iterator;
 
