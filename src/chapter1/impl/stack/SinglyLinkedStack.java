@@ -1,9 +1,15 @@
 package chapter1.impl.stack;
 
 import chapter1.Stack;
+import util.CheckUtil;
 
 import java.util.Iterator;
 
+/**
+ * @author bxwang
+ * @date 2021/9/28
+ * @param <T>
+ */
 public class SinglyLinkedStack<T> implements Stack<T> {
 
     private int size;
@@ -11,21 +17,25 @@ public class SinglyLinkedStack<T> implements Stack<T> {
 
     @Override
     public void push(T t) {
-        Node<T> node = new Node<>(t);
+        CheckUtil.checkType();
         Node<T> oldFirst = first;
-        first = node;
+
+        first = new Node<>();
+        first.item = t;
         first.next = oldFirst;
-        size++;
+        size ++;
     }
 
     @Override
     public T pop() {
-        Node<T> firstNode = first;
-        if (first != null) {
-            first = first.next;
-            size--;
+        if (isEmpty()) {
+            return null;
         }
-        return firstNode.item;
+        T value = first.item;
+        first = first.next;
+        size--;
+
+        return value;
     }
 
     @Override
@@ -56,7 +66,6 @@ public class SinglyLinkedStack<T> implements Stack<T> {
             }
         };
     }
-
 
     private class Node<I> {
         private I item;

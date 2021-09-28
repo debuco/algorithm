@@ -39,7 +39,10 @@ public class FixedCapacityStack<T> implements Stack<T> {
             return null;
         }
 
-        return container[--size];
+        T value = container[--size];
+        // 注意对象游离，不能及时被垃圾回收器回收
+        container[size] = null;
+        return value;
 
     }
 
@@ -55,11 +58,10 @@ public class FixedCapacityStack<T> implements Stack<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new ReverseArrayIterator<T>();
+        return new ReverseArrayIterator<>();
     }
 
-
-    public class ReverseArrayIterator<I> implements Iterator<I> {
+    private class ReverseArrayIterator<I> implements Iterator<I> {
         private int index = size - 1;
 
         @Override

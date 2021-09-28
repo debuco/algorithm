@@ -1,6 +1,7 @@
-package chapter1.impl.queue;
+package chapter1.impl.bag;
 
-import chapter1.Queue;
+import chapter1.Bag;
+import chapter1.impl.queue.SinglyLinkedQueue;
 
 import java.util.Iterator;
 
@@ -9,43 +10,17 @@ import java.util.Iterator;
  * @date 2021/9/28
  * @param <T>
  */
-public class SinglyLinkedQueue<T> implements Queue<T> {
-
+public class SinglyBag<T> implements Bag<T> {
     private int size;
     private Node<T> first;
-    private Node<T> last;
 
     @Override
-    public void enqueue(T item) {
-        Node<T> oldLast = last;
-        last = new Node<>();
-        last.item = item;
-        last.next = null;
-
-        if (isEmpty()) {
-            first = last;
-        } else {
-            oldLast.next = last;
-        }
+    public void add(T item) {
+        Node<T> oldFirst = first;
+        first = new Node<>();
+        first.item = item;
+        first.next = oldFirst;
         size++;
-    }
-
-    @Override
-    public T dequeue() {
-        if (!isEmpty()) {
-            T item = first.item;
-
-            Node<T> oldFirst = first;
-
-            first = oldFirst.next;
-            if (null == first) {
-                last = null;
-            }
-            size--;
-
-            return item;
-        }
-        return null;
     }
 
     @Override
@@ -61,7 +36,7 @@ public class SinglyLinkedQueue<T> implements Queue<T> {
     @Override
     public Iterator<T> iterator() {
         return new Iterator<T>() {
-            private Node<T> current = first;
+            Node<T> current = first;
             @Override
             public boolean hasNext() {
                 return current != null;
@@ -69,9 +44,9 @@ public class SinglyLinkedQueue<T> implements Queue<T> {
 
             @Override
             public T next() {
-                Node<T> node = current;
+                T item = current.item;
                 current = current.next;
-                return node.item;
+                return item;
             }
         };
     }
