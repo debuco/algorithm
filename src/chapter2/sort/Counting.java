@@ -1,7 +1,9 @@
 package chapter2.sort;
 
-import chapter2.sort.SortTemplate;
-
+/**
+ * @author bxwang
+ * @date 2021/9/29
+ */
 public class Counting implements SortTemplate {
     @Override
     public void sort(Comparable[] a) {
