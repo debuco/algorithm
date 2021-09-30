@@ -3,17 +3,26 @@ package chapter3.impl;
 import chapter1.Queue;
 import chapter1.impl.queue.SinglyLinkedQueue;
 import chapter3.ST;
+import com.sun.istack.internal.Nullable;
+import util.CheckUtil;
 
+/**
+ * @author bxwang
+ * @date 2021/9/30
+ * @param <K>
+ * @param <V>
+ */
 public class SequentialSearchST<K extends Comparable<K>, V> implements ST<K, V> {
-
-    private class Node{
+    private class Node {
         private K key;
         private V value;
         private Node next;
+
         private Node(K key, V value) {
             this.key = key;
             this.value = value;
         }
+
         private Node(K key, V value, Node next) {
             this.key = key;
             this.value = value;
@@ -21,82 +30,76 @@ public class SequentialSearchST<K extends Comparable<K>, V> implements ST<K, V> 
         }
     }
 
-    private Node head ;
+    private Node head;
 
     private int size;
 
     @Override
     public void put(K key, V value) {
-        if (key == null) {
-            throw new IllegalArgumentException();
-        }
+        //元素判空
+        CheckUtil.checkTypeAndCapacity();
 
+        //延时删除
         if (value == null) {
             delete(key);
             return;
         }
-        Node tempNode = head;
-        for (; tempNode != null; tempNode = tempNode.next) {
-            if (tempNode.key.equals(key)) {
-                tempNode.value = value;
-                return;
-            }
+
+        //判断该键对应的node是否已经存在
+        Node exist = getKey(head, key);
+        //存在相同键的节点
+        if (exist != null) {
+            exist.value = value;
+        } else {
+            Node oldFirst = head;
+            head = new Node(key, value);
+            head.next = oldFirst;
+            size ++;
         }
-        head = new Node(key, value, head);
+    }
+
+    @Nullable
+    private Node getKey(Node head, K key) {
+        if (head == null) {
+            return null;
+        }
+        if (head.key.compareTo(key) == 0) {
+            return head;
+        }
+
+        return getKey(head.next, key);
     }
 
     @Override
     public V get(K key) {
-        if (key == null) {
-            throw new IllegalArgumentException();
-        }
+        CheckUtil.checkTypeAndCapacity();
 
-        V result = null;
-        for (Node tempNode = head; tempNode != null; tempNode = tempNode.next) {
-            if (tempNode.key.equals(key)) {
-                result = tempNode.value;
-                break;
-            }
-        }
-        return result;
+        Node exists = getKey(head, key);
+        return null == exists ? null : exists.value;
     }
 
     @Override
     public void delete(K key) {
-        if (key == null) {
-            throw new IllegalArgumentException();
-        }
-
-        head = delete(head, key);
+        head = deleteKey(head, key);
     }
-    private Node delete(Node node, K key) {
-        if (node == null) {
+
+    private Node deleteKey(Node head, K key) {
+        if (head == null) {
             return null;
         }
-        if (node.key.equals(key)) {
+        if (head.key.compareTo(key) == 0) {
             size--;
-            return node.next;
+            return head.next;
         }
 
-        node.next = delete(node.next, key);
-        return node;
+        head.next = deleteKey(head.next, key);
+
+        return head;
     }
 
     @Override
     public boolean contains(K key) {
-        return contains(head, key);
-    }
-
-    private boolean contains(Node head, K key) {
-        if (head == null) {
-            return false;
-        }
-
-        if (head.key.equals(key)) {
-            return true;
-        }
-
-        return contains(head.next, key);
+        return getKey(head, key) != null;
     }
 
     @Override
@@ -112,15 +115,10 @@ public class SequentialSearchST<K extends Comparable<K>, V> implements ST<K, V> 
     @Override
     public Iterable<K> keys() {
         Queue<K> queue = new SinglyLinkedQueue<>();
-        keys(head, queue);
+        for (Node node=head; node!=null; node = node.next) {
+            queue.enqueue(node.key);
+        }
         return queue;
     }
 
-    private void keys(Node head, Queue<K> queue) {
-        if (head == null) {
-            return;
-        }
-        queue.enqueue(head.key);
-        keys(head.next, queue);
-    }
 }
