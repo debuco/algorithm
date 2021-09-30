@@ -8,7 +8,7 @@ import chapter3.SortedST;
  * @param <K>
  * @param <V>
  */
-public class RedBlachST<K extends Comparable<K>, V> implements SortedST<K, V> {
+public class RedBlackST<K extends Comparable<K>, V> implements SortedST<K, V> {
 
     private static final boolean RED = true;
     private static final boolean BLACK = false;

@@ -1,9 +1,24 @@
 package chapter3.impl;
 
+import chapter1.Queue;
+import chapter1.impl.queue.SinglyLinkedQueue;
 import chapter3.SortedST;
+import com.sun.istack.internal.NotNull;
+import util.CheckUtil;
 
 import java.util.NoSuchElementException;
 
+/**
+ * @author bxwang
+ * @date 2021/9/30
+ * @param <K>
+ * @param <V>
+ * 二叉查找树：
+ *  ·每个节点都有一个{@link Comparable}的键
+ *  ·每个节点的键都大于左子节点的任意键，小于右子节点的任意键
+ *
+ *  递归
+ */
 public class BST<K extends Comparable<K>, V> implements SortedST<K, V> {
 
     private class Node<K1 extends Comparable<K1>, V1> {
@@ -22,6 +37,8 @@ public class BST<K extends Comparable<K>, V> implements SortedST<K, V> {
 
     @Override
     public void put(K key, V value) {
+        CheckUtil.checkTypeAndCapacity();
+
         node = put(node, key, value);
     }
 
@@ -29,13 +46,15 @@ public class BST<K extends Comparable<K>, V> implements SortedST<K, V> {
         if (root == null) {
             return new Node<>(key, value, 1);
         }
-        int cmp = key.compareTo(root.key);
+
+        int cmp = root.key.compareTo(key);
         if (cmp == 0) {
             root.value = value;
+            return root;
         } else if (cmp < 0) {
-            root.left = put(root.left, key, value);
-        } else {
             root.right = put(root.right, key, value);
+        } else {
+            root.left = put(root.left, key, value);
         }
         root.N = size(root.left) + size(root.right) + 1;
         return root;
@@ -44,6 +63,8 @@ public class BST<K extends Comparable<K>, V> implements SortedST<K, V> {
 
     @Override
     public V get(K key) {
+        CheckUtil.checkTypeAndCapacity();
+
         Node<K, V> result = getNode(node, key);
         return result==null ? null : result.value;
     }
@@ -52,60 +73,64 @@ public class BST<K extends Comparable<K>, V> implements SortedST<K, V> {
         if (root == null) {
             return null;
         }
-
-        int cmp = key.compareTo(root.key);
+        int cmp = root.key.compareTo(key);
         if (cmp == 0) {
             return root;
         } else if (cmp < 0) {
-            return getNode(root.left, key);
-        } else {
             return getNode(root.right, key);
+        } else {
+            return getNode(root.left, key);
         }
     }
 
     @Override
     public void delete(K key) {
-        if (key == null) {
-            throw new IllegalArgumentException();
-        }
+        CheckUtil.checkTypeAndCapacity();
         node = delete(node, key);
     }
 
 
     private Node<K, V> delete(Node<K, V> root, K key) {
-        if(root == null) {
-            return null;
-        }
-        int cmp = key.compareTo(root.key);
-        if (cmp == 0) {
-            if (root.left == null) {
-                return root.right;
-            } else if (root.right == null) {
-                return root.left;
-            }
-            Node<K, V> temp = root;
-            root = min(root);
-            root.right = deleteMin(temp.right);
-            root.left = temp.left;
-            return root;
+       if (root == null) {
+           return null;
+       }
+       int cmp = root.key.compareTo(key);
+       if (cmp == 0) {
+           if (root.left == null) {
+               return root.right;
+           }
 
+           if (root.right == null) {
+               return root.left;
+           }
+           // 保存临时二叉树
+           Node<K, V> temp = root;
+           // 将root指向临时二叉树的右子节点中的最小节点
+           root = min(temp.right);
+           // root的左子节点指向临时二叉树的左子节点
+           root.left = temp.left;
+           // root的右子节点指向删除了最小节点的右子节点
+           root.right = deleteMin(temp.right);
 
-        } else if(cmp < 0) {
-            root.left = delete(root.left, key);
-        } else {
-            root.right = delete(root.right, key);
-        }
-        root.N = size(root.left) + size(root.right) + 1;
-        return root;
+       } else if (cmp < 0) {
+           root.right = delete(root.right, key);
+       } else {
+           root.left = delete(root.left, key);
+       }
+       root.N = size(root.left) + size(root.right) + 1;
+       return root;
     }
 
     private Node<K, V> deleteMin(Node<K, V> root) {
-        if (root.left != null) {
-            root.left = deleteMin(root.left);
-        } else {
+        if (root == null) {
+            return null;
+        }
+
+        if (root.left == null) {
             return root.right;
         }
 
+        root = deleteMin(root.left);
         root.N = size(root.left) + size(root.right) + 1;
         return root;
     }
@@ -157,7 +182,7 @@ public class BST<K extends Comparable<K>, V> implements SortedST<K, V> {
         return min(node).key;
     }
 
-    private Node<K, V> min(Node<K,V> root) {
+    private Node<K, V> min(@NotNull Node<K,V> root) {
         if (root.left!=null) {
             return min(root.left);
         } else {
@@ -192,32 +217,29 @@ public class BST<K extends Comparable<K>, V> implements SortedST<K, V> {
         }
 
         Node<K, V> result = floor(node, key);
-        if (result == null) {
-            throw new NoSuchElementException();
-        }
-        return result.key;
+
+        return result == null ? null : result.key;
     }
 
     private Node<K, V> floor(Node<K, V> root, K key) {
         if (root == null) {
             return null;
         }
-        int cmp = key.compareTo(root.key);
+
+        int cmp = root.key.compareTo(key);
         if (cmp == 0) {
             return root;
-        } else if (cmp < 0) {
+        } else if(cmp < 0) {
+            Node t = floor(root.right, key);
+            if (t == null) {
+                return root;
+            } else {
+                return t;
+            }
+        } else {
             return floor(root.left, key);
         }
-        /*
-            this is great
-         */
-        Node<K, V> temp = floor(node.right, key);
-        if (temp != null) {
-            return temp;
-        }
-
-        return node;
-}
+    }
 
     @Override
     public K ceiling(K key) {
@@ -324,11 +346,33 @@ public class BST<K extends Comparable<K>, V> implements SortedST<K, V> {
 
     @Override
     public Iterable<K> keys(K lo, K high) {
-        return null;
+        CheckUtil.checkTypeAndCapacity();
+        Queue<K> queue = new SinglyLinkedQueue<>();
+        keys(node, queue, lo, high);
+        return queue;
+    }
+
+    private void keys(Node<K, V> root, Queue<K> queue, K lo, K high) {
+        if (root == null) {
+            return;
+        }
+
+        int cmpLo = lo.compareTo(root.key);
+        int cmpHigh = high.compareTo(root.key);
+
+        if (cmpLo <= 0 && cmpHigh >= 0) {
+            queue.enqueue(root.key);
+        } else if (cmpLo>0) {
+            keys(root.left, queue, lo, high);
+        } else {
+            keys(root.right, queue, lo, high);
+        }
+
+
     }
 
     @Override
     public Iterable<K> keys() {
-        return null;
+        return keys(min(node).key, max(node).key);
     }
 }

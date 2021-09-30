@@ -2,7 +2,19 @@ package chapter3.impl;
 
 import chapter3.SortedST;
 import org.omg.CORBA.Object;
+import util.CheckUtil;
 
+/**
+ * @author bxwang
+ * @date 2021/9/30
+ * @param <K>
+ * @param <V>
+ * 平行数组，二分查找，进一步实现-->基于动态数组
+ * 核心方法:
+ * @see #rank(Comparable)
+ * @see #binarySearchCycle(Comparable)
+ * @see #binarySearchRecursion(Comparable[], Comparable, int, int)
+ */
 public class BinarySearchST<K extends Comparable<K>, V> implements SortedST<K, V> {
     private K[] keys;
     private V[] values;
@@ -13,11 +25,18 @@ public class BinarySearchST<K extends Comparable<K>, V> implements SortedST<K, V
         this.values = (V[]) new Object[capacity];
     }
 
-
     @Override
     public void put(K key, V value) {
-        int i = rank2(key);
+        CheckUtil.checkTypeAndCapacity();
+        //对删除的支持
+        if (value == null) {
+            delete(key);
+            return;
+        }
+
+        int i = binarySearchCycle(key);
         int index = size;
+        // 键已存在
         if (i < size && keys[i].compareTo(key) == 0) {
             values[i] = value;
             return;
@@ -75,52 +94,76 @@ public class BinarySearchST<K extends Comparable<K>, V> implements SortedST<K, V
 
     @Override
     public int size(K lo, K high) {
-
         return 0;
     }
 
     @Override
     public K minKey() {
-        return null;
+        CheckUtil.checkTypeAndCapacity();
+        return keys[0];
     }
 
     @Override
     public K maxKey() {
-        return null;
+        return keys[size - 1];
     }
 
     @Override
     public K floor(K key) {
+        int index = rank(key);
 
-        return null;
+        if (index == 0) {
+            return null;
+        }
+
+        if (key.compareTo(keys[index]) == 0) {
+            return keys[index];
+        } else {
+            return keys[index - 1];
+        }
     }
 
     @Override
     public K ceiling(K key) {
-        return null;
+
+        int index = rank(key);
+        if (index == size) {
+            return null;
+        }
+
+        return keys[index];
     }
 
     @Override
     public int rank(K key) {
-        return binarySearch(keys, key, 0, keys.length - 1);
+        return binarySearchRecursion(keys, key, 0, size - 1);
     }
 
-    private int binarySearch(K[] keys, K k, int lo, int high) {
-        if (high < lo) {
-            return lo;
-        }
-        int mid = lo + (high - lo) / 2;
-        int cmp = k.compareTo(keys[mid]);
-        if (cmp == 0) {
-            return mid;
-        } else if (cmp < 0) {
-            return binarySearch(keys, k, lo, mid - 1);
-        } else {
-            return binarySearch(keys, k, mid + 1, high);
-        }
+    /**
+     * 二分查找递归实现
+     */
+    private int binarySearchRecursion(K[] keys, K k, int lo, int high) {
+       if (high < lo) {
+           return lo;
+       }
+
+       int mid = lo + (high - lo)/2;
+       int cmp = keys[mid].compareTo(k);
+
+       if ( cmp == 0) {
+           return mid;
+       } else if (cmp < 0) {
+           return binarySearchRecursion(keys, k, mid + 1, high);
+       } else {
+           return binarySearchRecursion(keys, k, lo, mid - 1);
+       }
+
     }
 
-    private int rank2(K key) {
+    /**
+     * 二分查找循环实现
+     */
+    private int binarySearchCycle(K key) {
         int lo = 0, hi = size - 1;
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;

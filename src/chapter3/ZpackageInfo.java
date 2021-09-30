@@ -29,5 +29,7 @@
  * 代码清单：
  * 1. 字典的数据抽象{@link chapter3.ST}
  * 2. 排序字典数据抽象{@link chapter3.SortedST}
+ * 3. 基于单链表的字典实现{@link chapter3.impl.SequentialSearchST}
+ * 4. 基于平行数组的字典实现{@link chapter3.impl.BinarySearchST}
  */
 package chapter3;

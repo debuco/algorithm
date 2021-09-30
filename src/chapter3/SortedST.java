@@ -23,7 +23,7 @@ public interface SortedST<K extends Comparable<K>, V> {
      */
     int rank(K key);
     /**
-     * 排名为k的键
+     * 排名为top的键
      */
     K select(int top);
     void deleteMinKey();
