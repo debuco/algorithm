@@ -62,6 +62,7 @@ public class SeparateChainingHashSet<K extends Comparable<K>, V> implements ST<K
     }
 
     private int hash(K key) {
+        // 屏蔽高位符号位
         return (key.hashCode() & 0x7fffffff) % capacity;
     }
 

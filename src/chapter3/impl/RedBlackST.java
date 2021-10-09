@@ -69,6 +69,12 @@ public class RedBlackST<K extends Comparable<K>, V> implements SortedST<K, V> {
             node.value = value;
         }
 
+        /*
+         * 该处修复的顺序直观重要
+         * 1. 当前节点的右子节点为红，左子节点黑，左旋转当前节点
+         * 2. 当前节点的左子节点以及左子节点的左子节点为红，右旋转当前节点
+         * 3. 当前节点的左子节点以及右子节点为空，反转三个节点的颜色
+         */
         if (isRed(node.right) && !isRed(node.left)) {
             node = rotateLeft(node);
         }
@@ -89,26 +95,29 @@ public class RedBlackST<K extends Comparable<K>, V> implements SortedST<K, V> {
     }
 
     private Node rotateRight(Node node) {
-        Node r = node.left;
-        node.left = r.right;
-        r.right = node;
-        r.color = node.color;
+
+        Node x = node.left;
+        node.left = x.right;
+        x.right = node;
+        x.color = node.color;
         node.color = RED;
-        r.size = node.size;
+        x.size = node.size;
         node.size = size(node.left) + size(node.right) + 1;
-        return node;
+
+        return x;
     }
 
     private Node rotateLeft(Node node) {
-        Node r = node.right;
-        node.right = r.left;
-        r.left = node;
-        r.color = node.color;
+
+        Node x = node.right;
+        node.right = x.left;
+        x.left = node;
+        x.color = node.color;
         node.color = RED;
-        r.size = node.size;
+        x.size = node.size;
         node.size = size(node.left) + size(node.right) + 1;
 
-        return r;
+        return x;
     }
 
 

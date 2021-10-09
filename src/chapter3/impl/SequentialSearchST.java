@@ -46,7 +46,7 @@ public class SequentialSearchST<K extends Comparable<K>, V> implements ST<K, V> 
         }
 
         //判断该键对应的node是否已经存在
-        Node exist = getKey(head, key);
+        Node exist = getNode(head, key);
         //存在相同键的节点
         if (exist != null) {
             exist.value = value;
@@ -59,7 +59,7 @@ public class SequentialSearchST<K extends Comparable<K>, V> implements ST<K, V> 
     }
 
     @Nullable
-    private Node getKey(Node head, K key) {
+    private Node getNode(Node head, K key) {
         if (head == null) {
             return null;
         }
@@ -67,14 +67,14 @@ public class SequentialSearchST<K extends Comparable<K>, V> implements ST<K, V> 
             return head;
         }
 
-        return getKey(head.next, key);
+        return getNode(head.next, key);
     }
 
     @Override
     public V get(K key) {
         CheckUtil.checkTypeAndCapacity();
 
-        Node exists = getKey(head, key);
+        Node exists = getNode(head, key);
         return null == exists ? null : exists.value;
     }
 
@@ -99,7 +99,7 @@ public class SequentialSearchST<K extends Comparable<K>, V> implements ST<K, V> 
 
     @Override
     public boolean contains(K key) {
-        return getKey(head, key) != null;
+        return getNode(head, key) != null;
     }
 
     @Override
