@@ -5,6 +5,9 @@ import chapter1.impl.queue.SinglyLinkedQueue;
 import chapter3.ST;
 
 /**
+ * @author bxwang
+ * @date 2021/9/30 22:19
+ *
  * 数组大小为M
  * 链表长度为L
  * 元素数量为N
@@ -20,6 +23,8 @@ import chapter3.ST;
  * 2. 处理碰撞冲突
  *      a. 拉链法
  *      b. 线性探测法
+ *
+ * 时间和空间上的权衡
  * @param <K>
  * @param <V>
  */

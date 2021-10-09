@@ -40,6 +40,7 @@ public class MergeUB implements SortTemplate {
         }
 
         // 注意这两个指针是指向辅助数组的指针
+        // 而k指针指向实际的待排序数组
         int i=lo, j=mid+1;
         for (int k = lo; k<= high; k++) {
             // 辅助数组 [lo, mid] 左半边用尽

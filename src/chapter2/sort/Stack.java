@@ -15,5 +15,35 @@ package chapter2.sort;
 public class Stack implements SortTemplate {
     @Override
     public void sort(Comparable[] a) {
+        int len = a.length - 1;
+        int beginIndex = len >> 1;
+        for (int i = beginIndex; i>=0; i--) {
+            sink(a, i, len);
+        }
+
+        for (int i = len; i <= 0; i--) {
+            exch(a, 0, i);
+            sink(a, 0, i-1);
+        }
+    }
+
+    private void sink(Comparable[] a, int i, int len) {
+        // 左子节点index
+        int li = (i << 1) + 1;
+        int ri = (i << 1) + 2;
+
+        if (li > len) {
+            return;
+        }
+
+        int cMax = li;
+        if (ri <= len && less(a[li], a[ri])) {
+            cMax = ri;
+        }
+
+        if (less(a[i], a[cMax])) {
+            exch(a, i, cMax);
+            sink(a, cMax, len);
+        }
     }
 }
