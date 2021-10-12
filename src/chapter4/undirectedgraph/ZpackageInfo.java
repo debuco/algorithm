@@ -52,9 +52,13 @@
  *    ·给定一幅图和一个起点s，从s到v是否存在一条路径，如果有找出这条路径
  *      ·接口定义：{@link chapter4.undirectedgraph.Paths}
  *      ·深度优先搜索路径：{@link chapter4.undirectedgraph.graphimpl.DepthFirstPaths}
+ *    ·给定一幅图，计算其联通分量，并判断节点v和节点w联通么
+ *      ·接口定义：{@link chapter4.undirectedgraph.CC}
+ *      ·深度优先搜索实现：{@link chapter4.undirectedgraph.graphimpl.DFSCC}
  * 4. 广度优先搜索
  *    深度优先搜索搜索到的路径取决于图的结构，图的调用和递归调用的性质
  *    ·单点最短路径
  *      给定一幅图和一个起点source，回答从source到给定目标顶点v是否存在一条路径？如果有找到其中最短的那条。
+ *      ·深度优先搜索最短路径：{@link chapter4.undirectedgraph.graphimpl.BreadthFirstPaths}
  */
 package chapter4.undirectedgraph;
