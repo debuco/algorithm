@@ -3,6 +3,22 @@ package chapter4.directedgraph;
 /**
  * @author bxwang(570463767 @ qq.com)
  * @date 2021/10/13 9:58
+ * 当且仅当一幅有向图是无环图时才能进行拓扑排序
+ * 基本思想：
+ * ·深度优先搜索只会访问每个顶点一次，如果将dfs()的参数顶点保存在一个数据结构中，遍历这个数据结构就能访问图中所有顶点
+ * ·遍历的顺序取决于这个数据结构的性质和是在递归调用之前还是之后进行保存
+ *      ·前序：在递归调用之前将顶点加入队列
+ *      ·后续：在递归调用之后将顶点加入队列
+ *      ·逆后续：在递归调用之后将顶点压入栈
  */
-public class Topological {
+public interface Topological {
+    /**
+     * 图是有向无环图么
+     */
+    boolean isDAG();
+
+    /**
+     * 拓扑有序的所有顶点
+     */
+    Iterable<Integer> order();
 }

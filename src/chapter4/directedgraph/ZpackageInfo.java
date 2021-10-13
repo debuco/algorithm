@@ -23,5 +23,8 @@
  *      广度优先搜索实现：{@link chapter4.directedgraph.BFSDirectedPaths}
  * 5. 寻找有向环
  *    深度优先遍历实现：{@link chapter4.directedgraph.DirectedCycle}
+ * 6. 拓扑排序
+ *    拓扑接口定义：{@link chapter4.directedgraph.Topological}
+ *
  */
 package chapter4.directedgraph;
