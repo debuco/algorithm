@@ -1,4 +1,4 @@
-package chapter4.undirectedgraph.graphimpl;
+package chapter4.undirectedgraph.impl;
 
 import chapter1.Stack;
 import chapter1.impl.stack.SinglyLinkedStack;

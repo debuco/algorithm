@@ -1,4 +1,4 @@
-package chapter4.undirectedgraph.graphimpl;
+package chapter4.undirectedgraph.impl;
 
 import chapter1.Bag;
 import chapter1.impl.bag.SinglyLinkedBag;
@@ -22,6 +22,9 @@ public class GraphImpl implements Graph {
     // 边的数目
     private int E;
 
+    /**
+     * 这块的数据结构可以更换
+     */
     private Bag<Integer>[] adj;
 
     public GraphImpl(int V) {

@@ -1,4 +1,4 @@
-package chapter4.undirectedgraph.graphimpl;
+package chapter4.undirectedgraph.impl;
 
 import chapter4.undirectedgraph.Graph;
 import chapter4.undirectedgraph.Search;

@@ -1,4 +1,4 @@
-package chapter4.undirectedgraph.graphimpl;
+package chapter4.undirectedgraph.impl;
 
 import chapter1.Queue;
 import chapter1.Stack;

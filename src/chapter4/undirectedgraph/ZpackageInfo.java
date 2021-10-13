@@ -1,7 +1,7 @@
 /**
  * @author bxwang
  * @date 2021/10/12
- * 重要概念：
+ * 概念：
  * 图是由一组顶点和一组能够将两个顶点相连的边组成的
  * ·边(edge)
  * ·顶点(vertex)
@@ -40,25 +40,34 @@
  * 17. 图的密度
  * 18. 二分图
  *
+ *---------------------------------------------------------------------------------------------
+ * 以下代码不考虑自环和平行边
+ *
+ * 连通性
+ * 路径
  *
  * 代码清单：
  * 0. 图的使用案例：{@link chapter4.undirectedgraph.GraphClient}
  * 1. 无向图的接口定义：{@link chapter4.undirectedgraph.Graph}
- * 2. 无向图的实现：{@link chapter4.undirectedgraph.graphimpl.GraphImpl}
+ * 2. 无向图的实现：{@link chapter4.undirectedgraph.impl.GraphImpl}
  * 3. 深度优先搜索
  *    ·两个给定的顶点是否连通？
  *      ·图的搜索API：{@link chapter4.undirectedgraph.Search}
- *      ·深度优先搜索连通性：代码：{@link chapter4.undirectedgraph.graphimpl.DepthFirstSearch}
- *    ·给定一幅图和一个起点s，从s到v是否存在一条路径，如果有找出这条路径
+ *      ·深度优先搜索连通性：代码：{@link chapter4.undirectedgraph.impl.DepthFirstSearch}
+ *    ·给定一幅图和一个起点s，从s到v是否存在一条路径，如果有，找出这条路径
  *      ·接口定义：{@link chapter4.undirectedgraph.Paths}
- *      ·深度优先搜索路径：{@link chapter4.undirectedgraph.graphimpl.DepthFirstPaths}
+ *      ·深度优先搜索路径：{@link chapter4.undirectedgraph.impl.DepthFirstPaths}
  *    ·给定一幅图，计算其联通分量，并判断节点v和节点w联通么
  *      ·接口定义：{@link chapter4.undirectedgraph.CC}
- *      ·深度优先搜索实现：{@link chapter4.undirectedgraph.graphimpl.DFSCC}
+ *      ·深度优先搜索实现：{@link chapter4.undirectedgraph.impl.DFSCC}
+ *    ·给定的图是无环图么？
+ *      ·
  * 4. 广度优先搜索
  *    深度优先搜索搜索到的路径取决于图的结构，图的调用和递归调用的性质
  *    ·单点最短路径
  *      给定一幅图和一个起点source，回答从source到给定目标顶点v是否存在一条路径？如果有找到其中最短的那条。
- *      ·深度优先搜索最短路径：{@link chapter4.undirectedgraph.graphimpl.BreadthFirstPaths}
+ *      ·深度优先搜索最短路径：{@link chapter4.undirectedgraph.impl.BreadthFirstPaths}
+ * 5. 无向无环图
+ *    深度优先判断实现：{@link chapter4.undirectedgraph.Cycle}
  */
 package chapter4.undirectedgraph;
