@@ -50,7 +50,7 @@ public class SinglyLinkedBag<T> implements Bag<T> {
         };
     }
 
-    private class Node<I> {
+    private static class Node<I> {
         private I item;
         private Node<I> next;
 

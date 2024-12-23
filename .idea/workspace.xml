@@ -1,26 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="94571765-ae2e-4db6-b029-f648f9aa4261" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chapter2/ZpackageInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter2/sort/Insertion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter2/sort/Selection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter2/sort/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter1/BinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter1/impl/BinarySearchImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter2/priorityqueue/Max.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter2/priorityqueue/Min.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter2/priorityqueue/MinPriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter2/priorityqueue/PriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/Exchanger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter1/ZpackageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/ZpackageInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter1/impl/bag/SinglyBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/impl/bag/SinglyLinkedBag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/MaxPriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/priorityqueue/MaxPriorityQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/SortTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Bublle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/Bublle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Counting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/Counting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Insertion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/MaxPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/priorityqueue/MaxPQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/MergeBU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/MergeBU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/MergeUB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/MergeUB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Quick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/Quick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Selection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Shell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/sort/Shell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/impl/Stack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter1/impl/bag/SinglyLinkedBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/impl/bag/SinglyLinkedBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter1/impl/stack/ResizingArrayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter1/impl/stack/ResizingArrayStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/ZpackageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/ZpackageInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/priorityqueue/MaxPQ.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/priorityqueue/MaxPriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/priorityqueue/MaxPriorityQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter3/impl/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter3/impl/BST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter3/impl/BinarySearchST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter3/impl/BinarySearchST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter3/impl/SequentialSearchST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter3/impl/SequentialSearchST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/directedgraph/DFSDirectedPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/DFSDirectedPaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/directedgraph/DirectedCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/DirectedCycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/directedgraph/DirectedDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/DirectedDFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/directedgraph/impl/TopologicalImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/impl/TopologicalImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/CC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/CC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/Cycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/Cycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/DFSCC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/DFSCC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/DepthFirstPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/DepthFirstPaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/GraphImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/GraphImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,47 +46,64 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="1sCIf1b9xb2OVRwAtehD8SrUeD3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="D:/BaiduNetdiskDownload/algs4.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Cycle.executor": "Debug",
+    "Application.DirectedCycle.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/wangbangxin/Project/algorithm",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "profiler.jvm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FixedCapacityStack">
-    <configuration name="FixedCapacityStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter1.impl.stack.FixedCapacityStack" />
+  <component name="RunManager" selected="Application.DirectedCycle">
+    <configuration name="Cycle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter4.undirectedgraph.Cycle" />
       <module name="algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter1.impl.stack.*" />
+          <option name="PATTERN" value="chapter4.undirectedgraph.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,12 +111,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter1.impl.MyLinkedList" />
+    <configuration name="DirectedCycle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter4.directedgraph.DirectedCycle" />
       <module name="algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter1.impl.*" />
+          <option name="PATTERN" value="chapter4.directedgraph.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,10 +159,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FixedCapacityStack" />
-        <item itemvalue="Application.Test (1)" />
-        <item itemvalue="Application.MyLinkedList" />
+        <item itemvalue="Application.DirectedCycle" />
+        <item itemvalue="Application.Cycle" />
         <item itemvalue="Application.ThreeSum" />
+        <item itemvalue="Application.Test (1)" />
         <item itemvalue="Application.ResizingArrayStack" />
       </list>
     </recent_temporary>
@@ -149,6 +179,15 @@
       </list>
     </option>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -163,38 +202,21 @@
       <workItem from="1620868170291" duration="76495000" />
       <workItem from="1621581752844" duration="674000" />
       <workItem from="1632748285553" duration="64288000" />
+      <workItem from="1703217306936" duration="684000" />
+      <workItem from="1734076641652" duration="390000" />
+      <workItem from="1734077038208" duration="275000" />
+      <workItem from="1734077341047" duration="1855000" />
+      <workItem from="1734148744855" duration="16350000" />
+      <workItem from="1734316904006" duration="1552000" />
+      <workItem from="1734599337337" duration="598000" />
+      <workItem from="1734667019130" duration="661000" />
+      <workItem from="1734753893484" duration="15281000" />
+      <workItem from="1734781391640" duration="7641000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1632823112824">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1632823112824" />
-    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1632818004441" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1632817971453">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1632817971453" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1632817971452">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1632817971452" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1632817971452">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1632817971452" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1632817971452">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1632817971452" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1632794970671">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1632794970671" />
+    <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -234,6 +256,21 @@
           <line>191</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/chapter4/undirectedgraph/Cycle.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/chapter4/undirectedgraph/Cycle.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/chapter4/directedgraph/DirectedCycle.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -244,5 +281,9 @@
         <watch expression="node.right" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

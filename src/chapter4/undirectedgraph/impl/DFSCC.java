@@ -8,6 +8,9 @@ import chapter4.undirectedgraph.Graph;
  * @date 2021/10/12 17:24
  */
 public class DFSCC extends CC {
+    /**
+     * 标记 一个顶点作为每个联通分量中的起点
+     */
     private boolean[] marked;
 
     /**
@@ -16,14 +19,15 @@ public class DFSCC extends CC {
      */
     private int[] id;
 
+    /**
+     * 表示联通分量的数量
+     */
     private int count;
 
     public DFSCC(Graph graph) {
         super(graph);
-
         marked = new boolean[graph.V()];
         id = new int[graph.V()];
-
         for (int s = 0; s < graph.V(); s++) {
             if (!marked[s]) {
                 dfs(graph, s);

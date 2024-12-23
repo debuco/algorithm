@@ -1,7 +1,6 @@
 package chapter1.impl.stack;
 
 import chapter1.Stack;
-import org.omg.CORBA.Object;
 import util.CheckUtil;
 
 import java.util.Iterator;

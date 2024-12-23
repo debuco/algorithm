@@ -3,7 +3,6 @@ package chapter3.impl;
 import chapter1.Queue;
 import chapter1.impl.queue.SinglyLinkedQueue;
 import chapter3.ST;
-import com.sun.istack.internal.Nullable;
 import util.CheckUtil;
 
 /**
@@ -58,7 +57,6 @@ public class SequentialSearchST<K extends Comparable<K>, V> implements ST<K, V> 
         }
     }
 
-    @Nullable
     private Node getNode(Node head, K key) {
         if (head == null) {
             return null;

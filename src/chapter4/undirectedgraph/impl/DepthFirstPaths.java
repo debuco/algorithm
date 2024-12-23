@@ -16,7 +16,8 @@ public class DepthFirstPaths extends Paths {
      */
     private boolean[] marked;
     /**
-     * 从起点到一个顶点的已知路径上的最后一个顶点
+     * 从起点到一个顶点的已知路径上的最后一个顶点， 如果有多个路径存在时会产生覆盖行为
+     *
      * 理解该数据结构十分重要
      */
     private int[] edgeTo;
@@ -27,6 +28,11 @@ public class DepthFirstPaths extends Paths {
         dfs(graph, source);
     }
 
+    /**
+     * 此处指标记了可以达到的路径的点
+     * @param graph
+     * @param v
+     */
     private void dfs(Graph graph, int v) {
         marked[v] = true;
         for (int w : graph.adj(v)) {
@@ -35,7 +41,6 @@ public class DepthFirstPaths extends Paths {
                 dfs(graph, w);
             }
         }
-
     }
 
     @Override

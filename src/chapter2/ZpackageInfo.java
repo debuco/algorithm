@@ -20,7 +20,7 @@
  *    归并排序：自顶向下 {@link chapter2.sort.MergeUB};自下而上{@link chapter2.sort.MergeBU}
  *    快速排序：{@link chapter2.sort.Quick}
  *    堆排序：{@link chapter2.sort.Stack}
- * 2. 优先队列：接口定义{@link chapter2.priorityqueue.MaxPriorityQueue}
- *    实现：{@link chapter2.priorityqueue.MaxPQ}
+ * 2. 优先队列：接口定义{@link chapter2.priorityqueue.PriorityQueue}
+ *    实现：{@link chapter2.priorityqueue.MaxPriorityQueue}
  */
 package chapter2;

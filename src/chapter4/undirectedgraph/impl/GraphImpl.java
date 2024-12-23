@@ -9,6 +9,7 @@ import edu.princeton.cs.algs4.In;
  * @author bxwang
  * @date 2021/10/12
  * 邻接表数组是一个非常重要的概念：
+ *
  * · 以顶点为索引的列表数组
  *      · 使用的空间和(V+E)成正比
  *      · 添加一条边所需要的时间为常数
@@ -36,15 +37,7 @@ public class GraphImpl implements Graph {
         }
     }
 
-    public GraphImpl(In in) {
-        this(in.readInt());
-        int E = in.readInt();
-        for (int i = 0; i<E; i++) {
-            int v = in.readInt();
-            int w = in.readInt();
-            addEdge(v, w);
-        }
-    }
+
     @Override
     public int V() {
         return V;
@@ -61,6 +54,8 @@ public class GraphImpl implements Graph {
         adj[w].add(v);
         E++;
     }
+
+
 
     @Override
     public Iterable<Integer> adj(int v) {

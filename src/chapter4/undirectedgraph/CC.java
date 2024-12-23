@@ -1,6 +1,7 @@
 package chapter4.undirectedgraph;
 
 /**
+ * 联通分量
  * @author bxwang
  * @date 2021/10/12 17:13
  *

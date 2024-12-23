@@ -11,16 +11,13 @@ import chapter1.impl.stack.SinglyLinkedStack;
 public class DFSDirectedPaths {
     private Digraph digraph;
     private int source;
-
     private boolean[] marked;
-
     private int[] edgeTo;
     public DFSDirectedPaths(Digraph digraph, int source) {
         this.digraph = digraph;
         this.source = source;
         this.marked = new boolean[digraph.V()];
         this.edgeTo = new int[digraph.V()];
-
         dfs(digraph, source);
     }
 
@@ -28,7 +25,7 @@ public class DFSDirectedPaths {
         marked[source] = true;
         for (int x : digraph.adj(source)) {
             if (!marked[x]) {
-                // 索引是to， 内容是到该节点的最后一个节点
+                // 索引是to， 内容是到该节点的最后一个节点， 反向指向source
                 edgeTo[x] = source;
                 dfs(digraph, x);
             }

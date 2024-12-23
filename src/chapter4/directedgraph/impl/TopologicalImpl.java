@@ -20,10 +20,8 @@ public class TopologicalImpl implements Topological {
 
     public TopologicalImpl(Digraph digraph) {
         DirectedCycle cycle = new DirectedCycle(digraph);
-
         if (!cycle.hasCycle()) {
             DFSOrder dfsOrder = new DFSOrder(digraph);
-
             order = dfsOrder.getReversePost();
         }
     }

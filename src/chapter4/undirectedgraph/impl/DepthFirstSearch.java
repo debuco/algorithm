@@ -15,6 +15,9 @@ public class DepthFirstSearch extends Search {
      * 记录标记过的顶点
      */
     private boolean[] marked;
+    /**
+     * 与source联通的数量总数
+     */
     private int count;
     public DepthFirstSearch(Graph graph, int source) {
         super(graph, source);
