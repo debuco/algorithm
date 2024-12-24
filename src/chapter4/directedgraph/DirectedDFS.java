@@ -12,22 +12,12 @@ public class DirectedDFS {
     private boolean[] marked;
     private Digraph digraph;
     private int source;
-    private Iterable<Integer> sources;
 
     public DirectedDFS(Digraph digraph, int source) {
         this.digraph = digraph;
         this.source = source;
         this.marked = new boolean[digraph.V()];
         dfs(digraph, source);
-    }
-
-    public DirectedDFS(Digraph digraph, Iterable<Integer> sources) {
-        this.digraph = digraph;
-        this.sources = sources;
-        this.marked = new boolean[digraph.V()];
-        for (Integer s : sources) {
-            dfs(digraph, s);
-        }
     }
 
     private void dfs(Digraph digraph, int source) {

@@ -37,8 +37,6 @@ public class DirectedCycle {
                 dfs(digraph, v);
             }
         }
-
-        System.out.println("");
     }
 
     private void dfs(Digraph digraph, int v) {
