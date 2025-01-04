@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94571765-ae2e-4db6-b029-f648f9aa4261" name="Default Changelist" comment="add some comment and fix something">
-      <change afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/DepthFirstOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/KosarajuSCC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/SCC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/TransitiveClosure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter4/mstree/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter4/mstree/EdgeWeightedGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter4/mstree/Mst.java" afterDir="false" />
+    <list default="true" id="94571765-ae2e-4db6-b029-f648f9aa4261" name="Default Changelist" comment="add mst">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter4/directedgraph/DirectedCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/DirectedCycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter4/directedgraph/DirectedDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/DirectedDFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/Paths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/Paths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/SymbolGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/SymbolGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/BreadthFirstPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/BreadthFirstPaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/DepthFirstPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/DepthFirstPaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/GraphImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/GraphImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/SymbolGraphImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/undirectedgraph/impl/SymbolGraphImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +34,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;debuco&quot;
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:debuco/algorithm.git&quot;,
+    &quot;accountId&quot;: &quot;f6c76967-d0a6-40b2-bf68-af0a68e888e2&quot;
+  }
+}</component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -196,7 +206,10 @@
       <workItem from="1734667019130" duration="661000" />
       <workItem from="1734753893484" duration="15281000" />
       <workItem from="1734781391640" duration="9076000" />
-      <workItem from="1735027549137" duration="4315000" />
+      <workItem from="1735027549137" duration="7831000" />
+      <workItem from="1735179536924" duration="597000" />
+      <workItem from="1735616971738" duration="7057000" />
+      <workItem from="1735703536714" duration="11680000" />
     </task>
     <task id="LOCAL-00001" summary="add some comment and fix something">
       <option name="closed" value="true" />
@@ -206,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734935592030</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add mst">
+      <option name="closed" value="true" />
+      <created>1735050772057</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735050772057</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +235,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add some comment and fix something" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some comment and fix something" />
+    <MESSAGE value="add mst" />
+    <option name="LAST_COMMIT_MESSAGE" value="add mst" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

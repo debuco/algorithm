@@ -18,5 +18,7 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="algs4" level="project" />
+    <orderEntry type="library" name="guava-31.1-jre" level="project" />
   </component>
 </module>

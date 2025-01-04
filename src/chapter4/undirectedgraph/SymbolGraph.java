@@ -6,12 +6,6 @@ package chapter4.undirectedgraph;
  *
  */
 public abstract class SymbolGraph {
-    private String fileName;
-    private String delim;
-    public SymbolGraph(String fileName, String delim) {
-        this.fileName = fileName;
-        this.delim = delim;
-    }
 
     public abstract boolean contains(String key);
 

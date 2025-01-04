@@ -32,6 +32,7 @@ public class BreadthFirstPaths extends Paths {
     public BreadthFirstPaths(Graph graph, int source) {
         super(graph, source);
         marked = new boolean[graph.V()];
+        edgeTo = new int[graph.V()];
         bfs(graph, source);
     }
 

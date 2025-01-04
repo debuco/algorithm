@@ -3,7 +3,6 @@ package chapter4.undirectedgraph.impl;
 import chapter1.Bag;
 import chapter1.impl.bag.SinglyLinkedBag;
 import chapter4.undirectedgraph.Graph;
-import edu.princeton.cs.algs4.In;
 
 /**
  * @author bxwang

@@ -26,8 +26,6 @@ public class SymbolGraphImpl extends SymbolGraph {
     private Graph graph;
 
     public SymbolGraphImpl(String fileName, String delim) {
-        super(fileName, delim);
-
         hash = new LinearProbingHashST<>();
         In in = new In(fileName);
 
