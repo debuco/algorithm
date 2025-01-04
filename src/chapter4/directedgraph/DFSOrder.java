@@ -2,6 +2,8 @@ package chapter4.directedgraph;
 
 import chapter1.Queue;
 import chapter1.Stack;
+import chapter1.impl.queue.SinglyLinkedQueue;
+import chapter1.impl.stack.SinglyLinkedStack;
 
 /**
  * @author bxwang(570463767 @ qq.com)
@@ -15,29 +17,34 @@ public class DFSOrder  {
 
     /**
      * 所有顶点的前序队列
+     * FIFO
      */
     private Queue<Integer> pre;
 
     /**
      * 所有顶点的后序队列
+     * FIFO
      */
     private Queue<Integer> post;
 
     /**
      * 所有顶点的逆后序队列
+     * FILO
      */
     private Stack<Integer> reversePost;
 
     public DFSOrder(Digraph digraph) {
         this.digraph = digraph;
         this.marked = new boolean[digraph.V()];
+        this.pre = new SinglyLinkedQueue<>();
+        this.post = new SinglyLinkedQueue<>();
+        this.reversePost = new SinglyLinkedStack<>();
 
         for (int v = 0; v<digraph.V(); v++) {
             if (!marked[v]) {
                 dfs(digraph, v);
             }
         }
-
     }
 
     private void dfs(Digraph digraph, int v) {
@@ -52,7 +59,6 @@ public class DFSOrder  {
 
         post.enqueue(v);
         reversePost.push(v);
-
     }
 
     public Queue<Integer> getPre() {

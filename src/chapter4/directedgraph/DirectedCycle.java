@@ -15,7 +15,7 @@ public class DirectedCycle {
     private int[] edgeTo;
 
     /**
-     * 有向图中的所有顶点
+     * 有向环中的所有顶点
      */
     private Stack<Integer> cycle;
 

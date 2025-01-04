@@ -1,10 +1,13 @@
 package chapter4.directedgraph;
 
 /**
+ * ignore...
+ * 有向图的强连通性
+ *
  * @author: bangxin.wang
  * @date: 2024/12/24 21:39
  */
-public class KosarajuSCC implements SCC{
+public class KosarajuSCC implements SCC {
 
 
     @Override
