@@ -4,7 +4,7 @@ import chapter1.Bag;
 import chapter1.impl.bag.SinglyLinkedBag;
 
 /**
- * jiaquanwuxiangtu
+ *
  *
  * @author: bangxin.wang
  * @date: 2024/12/23 19:48
