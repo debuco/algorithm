@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94571765-ae2e-4db6-b029-f648f9aa4261" name="Default Changelist" comment="s">
+    <list default="true" id="94571765-ae2e-4db6-b029-f648f9aa4261" name="Default Changelist" comment="add kosaraju SCC">
+      <change afterPath="$PROJECT_DIR$/src/chapter4/mstree/LazyPrimMST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter4/directedgraph/DFSOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/DFSOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter4/directedgraph/DirectedCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/DirectedCycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter4/directedgraph/KosarajuSCC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/KosarajuSCC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter4/directedgraph/Topological.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/Topological.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter4/directedgraph/impl/TopologicalImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter4/directedgraph/impl/TopologicalImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +203,7 @@
       <workItem from="1735179536924" duration="597000" />
       <workItem from="1735616971738" duration="7057000" />
       <workItem from="1735703536714" duration="11896000" />
-      <workItem from="1735977041314" duration="3591000" />
+      <workItem from="1735977041314" duration="18285000" />
     </task>
     <task id="LOCAL-00001" summary="add some comment and fix something">
       <option name="closed" value="true" />
@@ -241,7 +237,23 @@
       <option name="project" value="LOCAL" />
       <updated>1735977144776</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix some error if directed graph and add some comment">
+      <option name="closed" value="true" />
+      <created>1735980684925</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735980684925</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add kosaraju SCC">
+      <option name="closed" value="true" />
+      <created>1736146028888</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736146028888</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +265,9 @@
     <MESSAGE value="fix some error" />
     <MESSAGE value="fix some error of undirected graph" />
     <MESSAGE value="s" />
-    <option name="LAST_COMMIT_MESSAGE" value="s" />
+    <MESSAGE value="fix some error if directed graph and add some comment" />
+    <MESSAGE value="add kosaraju SCC" />
+    <option name="LAST_COMMIT_MESSAGE" value="add kosaraju SCC" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
