@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94571765-ae2e-4db6-b029-f648f9aa4261" name="Default Changelist" comment="add kosaraju SCC">
-      <change afterPath="$PROJECT_DIR$/src/chapter4/mstree/LazyPrimMST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="94571765-ae2e-4db6-b029-f648f9aa4261" name="Default Changelist" comment="add lazy prim mst">
+      <change afterPath="$PROJECT_DIR$/src/chapter4/sptree/DirectedEdge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter4/sptree/EdgeWeightedDigraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter4/sptree/ShortestPath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter4/sptree/impl/DirectedEdgeImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter4/sptree/impl/EdgeWeightedDigraphImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -203,7 +206,7 @@
       <workItem from="1735179536924" duration="597000" />
       <workItem from="1735616971738" duration="7057000" />
       <workItem from="1735703536714" duration="11896000" />
-      <workItem from="1735977041314" duration="18285000" />
+      <workItem from="1735977041314" duration="23848000" />
     </task>
     <task id="LOCAL-00001" summary="add some comment and fix something">
       <option name="closed" value="true" />
@@ -253,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736146028888</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add lazy prim mst">
+      <option name="closed" value="true" />
+      <created>1736148301687</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736148301687</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +278,8 @@
     <MESSAGE value="s" />
     <MESSAGE value="fix some error if directed graph and add some comment" />
     <MESSAGE value="add kosaraju SCC" />
-    <option name="LAST_COMMIT_MESSAGE" value="add kosaraju SCC" />
+    <MESSAGE value="add lazy prim mst" />
+    <option name="LAST_COMMIT_MESSAGE" value="add lazy prim mst" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
